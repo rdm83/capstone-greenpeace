@@ -1,0 +1,345 @@
+:root {
+    --background:#343232;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #fff;
+    color: #343232;
+    font-family: 'Oswald', sans-serif;;
+    font-weight: 400;
+  }
+
+  /* Header Bar*/
+  header {
+    background: var(--background);
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .top-logo {
+    margin: 0;
+    padding: 15px;
+    width: 270px;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+  nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 500ms ease-out;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+  nav a {
+    color: #EFEBE5;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+    
+  }
+
+  .nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+    
+  }
+
+  .nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 300ms ease-out 400ms;
+  }
+
+  nav a:hover {
+    color: #F2CE57;
+  }
+  
+  .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: #F2CE57;
+  height: 3px;
+  width: 2em;
+  border-radius: 10px;
+  position: relative;
+}
+
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+
+  content: "";
+
+}
+
+.nav-toggle-label span::before {
+  
+  bottom: 9px;
+}
+
+
+.nav-toggle-label span::after {
+  
+  top: 6px;
+}
+ 
+@media screen and (min-width: 1400px){
+    .nav-toggle-label {
+      display: none;
+    }
+    
+    header{
+      display: grid;
+      grid-template-columns: 1fr auto minmax(600px, 3fr);
+      padding: 0 8% 0 4%;
+    }
+    
+    .top-logo {
+      grid-column: 2/3;
+    }
+    
+    nav {
+      all:unset;
+      grid-column: 3/4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    nav ul{
+      display: flex;
+    }
+    
+    nav li {
+      margin-left: 3em;
+      margin-bottom: 0;
+    }
+    
+    nav a {
+      opacity: 1;
+      position: relative;
+    }
+    /*
+    nav a::before {
+      content:"";
+      display: block;
+      height: 3px;
+      background: #F2CE57;
+      position: absolute;
+      border-radius: 10px;
+      top: -.5em;
+      left: 0;
+      right: 0;
+      transform: scale(0,1);
+      transform-origin: left;
+      transition: transform ease-in-out 250ms;
+    }
+    
+    nav a:hover::before {
+      transform: scale(1,1);
+    }
+    */
+  }
+
+  h1 {
+    font-weight: 700;
+    color: #fff;
+    font-size: 100px;
+    text-shadow: 2px 2px 4px #000;
+    
+  } 
+
+  .hero-image {
+    height: 100vh;
+    background-image: url("/images/hero-image.jpeg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20%;
+  }
+
+  /* Button */
+.donate-button{
+    font-size: 1.1em;
+    font-family: 'Oswald', sans-serif;;
+    font-weight: 500;
+    color: #EFEBE5;
+    background: #DD0606;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+  }
+
+  /*Mission*/
+
+  .mission{
+    height: 100vh;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+
+  .whats-our-mission{
+    max-width: 420px;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    background-color: #DD0606;
+    margin: auto;
+    
+    
+  }
+
+  .mission-text{
+    max-width: 700px;
+    margin: 50px auto;
+    font-weight: 400;
+    font-size: 35; 
+    text-align: center;
+    line-height: 1.5em;
+    
+  }
+
+  .about{
+    height: 100vh;
+    background-image: url("images/trash1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+
+  .overlay {
+      background-color: white;
+      padding: 5% 12%;
+      display: block;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20%;
+      text-align: center;
+
+  }
+
+  .text{
+      text-align: left;
+    
+  }
+
+  .trashpile{
+      background-image: url('images/pile-of-trash.jpeg');
+      background-size: contain;
+      background-position: center;
+      display:flex;
+      height: 120vh;
+      justify-content: center;
+      background-repeat: no-repeat;
+  }
+
+  .campaign{
+    height: 400px;
+    padding: 0 400px 0 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: left;
+  }
+
+  .bottle{
+    background-image: url('images/plastic_bottle.jpg');
+    background-size: contain;
+    background-position: center;
+    display:flex;
+    height: 300px;
+    justify-content: center;
+    background-repeat: no-repeat;
+    margin-bottom: 100px;
+    
+
+  }
+
+  .take-action{
+    height: 100vh;
+    background-image: url("images/trash2.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  
+
+  .posters {
+    display: flex;
+    align-items: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .container .box {
+    border: 1px solid #ccc;
+    padding: 10px;  
+  }
+  
+  .box{
+    width: 20%;
+  }
+
+  .box-1{
+      background-image: url("images/poster1.jpg");
+      width: 100vh;
+  }
