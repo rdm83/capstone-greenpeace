@@ -187,6 +187,9 @@
     text-shadow: 2px 2px 4px #000;
     
   } 
+h2 {
+    color: #61AB3B;
+}
 
   .hero-image {
     height: 100vh;
@@ -206,7 +209,7 @@
     font-family: 'Oswald', sans-serif;;
     font-weight: 500;
     color: #EFEBE5;
-    background: #DD0606;
+    background: #61AB3B;
     border: none;
     border-radius: 25px;
     padding: 10px 20px;
@@ -231,7 +234,7 @@
     font-size: 50px;
     text-align: center;
     color: white;
-    background-color: #DD0606;
+    background-color: #61AB3B;
     margin: auto;
     
     
@@ -245,6 +248,11 @@
     text-align: center;
     line-height: 1.5em;
     
+  }
+
+  .yellowbar{
+      background-color:#F2CE57;
+      height: 10px;
   }
 
   .about{
