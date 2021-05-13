@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="images/greenpeace-logo.png"class="top-logo">
+            <img src="images/greenpeace-logo.png"class="top-logo"><a href="https://www.greenpeace.org/global/"></a>
         </div>
 
         <input type="checkbox" id="nav-toggle" class="nav-toggle"> 
@@ -22,10 +22,10 @@
       
         <nav>
           <ul>
-            <li><a href="index.html">Campaign</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="take-action.html">Take Action</a></li>
-            <li><a href="donate.html">Donate</a></li>
+            <li><a href="#camp">Campaign</a></li>
+            <li><a href="#aboutus">About</a></li>
+            <li><a href="#takeaction">Take Action</a></li>
+            <li><a href="#donate">Donate</a></li>
           
           </ul>
         </nav> 
@@ -34,25 +34,26 @@
 
     <div class="hero-image">
         <!-- <img src="images/hero1.jpg"class="hero1"> -->
-          <h1 class="hero-text">Fighting Plastic Pollution
+          <h1 class="hero-text" >Fighting Plastic Pollution
           </h1>
           <button onclick="document.location='contact.html'" class="donate-button">TAKE ACTION</button>
       </div>
 
-      <div class="yellowbar"></div>
+      <div class="yellowbar" id="camp"></div>
 
       <div class="mission">
-       <div class="container">  
+       <div>  
       <h2 class="whats-our-mission">What's Our Mission</h2>
 
         <h3 class="mission-text">Our mission is to connect broken people to a community of support by providing free resources and services that address immediate and long-term needs in the areas of homelessness, hunger, poverty, addiction, abuse, education and human trafficking.  
         </h3>
-    </div> 
+      </div> 
       </div>
 
       <div class="yellowbar"></div>
 
-      <div class="about">
+      <div class="about" id="aboutus">
+  
           <div class="overlay">
             <h2>Our History</h2>
           <div class="text">
@@ -90,7 +91,7 @@
 
 <div class="yellowbar"></div>
 
-<div class="take-action">
+<div class="take-action" id="takeaction">
     <div class="overlay">
      <h2 class="our-history">Take Action!</h2>
     <div class="text">
@@ -103,30 +104,103 @@
 <div class="yellowbar"></div>
 
 <div class="posters">
-
-<!-- Trigger the Modal -->
-<img id="myImg" src="images/poster1.jpg" alt="Snow" style="width:100%;max-width:300px">
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- The Close Button -->
-  <span class="close">&times;</span>
-
-  <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01">
-
-  <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
+  <div class="campaign-overlay">
+  <h2>Campaign Ads</h2>
+  <div class="text">
+    
+    <p>We encourage you to download, printout, and help bring awareness to your local community. Feel free to print these out and hang them around! The more people see these the more they will want to change how we treat our planet.</p>
+  </div>
 </div>
- 
+  <!-- The four columns -->
+  <div class="row">
+    <div class="column">
+      <img src="images/poster1.jpg" alt="Bottle Burger" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/poster2.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/poster3.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+    </div>
+  </div>
+  
+  
+  </div>
+
 </div>
 
+<div class="yellowbar" id="donate"></div>
+
+<!-- contact -->
+
+<div class="contact-section">
+<div class="contact-form">
+  <form action="cantactform.php" method="get">
+
+    <!--Input Text Examples -->
+    <div class="input">
+      <label for="fname">First:</label>
+      <input type="text" name="fname" placeholder="first name">
+  
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" placeholder="last name">
+  
+      <label for="email">Email Address:</label>
+      <input type="text" name="email" placeholder="email">
+      
+      <label for="phone">Phone:</label>
+      <input type="text" name="phone" placeholder="xxx-xxx-xxxx">
+    </div>
+  
+    <!-- Radio Examples -->
+  
+    <div class="radio">
+      <label for="donate" class="radio-label">$150</label>
+      <input type="radio" name="donate" value="150">
+  
+      <label for="donate" class="radio-label">$75</label>
+      <input type="radio" name="donate" value="75">
+  
+      <label for="donate" class="radio-label">$25</label>
+      <input type="radio" name="donate" value="25">
+      
+      <label for="donate" class="radio-label">Other</label>
+      <input type="text" name="donate" placeholder="$5">
+    </div>
+  
+    <!-- Password example-->
+  
+    <!-- Text area examples-->
+    <textarea name="message" placeholder="Write a message..."></textarea>
+  
+    <!-- Select Example-->
+  
+   
+    <!--Submit Button Example-->
+  
+    <!--<input type="submit" name="submit">-->
+    <button type="submit" name="submit" class="submit-button">DONATE</button>
+  
+  </form>
+
+</div>
+
+
+
+
+<footer>
+  <div class="copyright">
+    <p>&copy; 2020 <strong>GreenPeace</strong> | All rights reserved | <a href="https://www.greenpeace.org/global/">HOME</a> | <a href="https://www.greenpeace.org/usa/about/">ABOUT</a> | <a href="https://www.greenpeace.org/usa/get-involved/">GET INVOLED</a> | <a href="https://www.greenpeace.org/usa/contact/">CONTACT</a> </p>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
 
    
-        
-        
-</div>
-
+<script src="script.js"></script>
 </body>
+
 </html>
