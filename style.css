@@ -70,7 +70,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   .nav-toggle:checked ~ nav {
     transform: scale(1,1);
     
@@ -196,7 +196,7 @@ h2 {
 
   .hero-image {
     height: 100vh;
-    background-image: url("/images/hero-image.jpeg");
+    background-image: url("images/hero-image.jpeg");
     background-position: center;
     background-size: cover;
     display: flex;
